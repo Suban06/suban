@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MY project-gallery</title>
+	<link rel="icon" type="image/x-icon" href="./image/logo.png">
+	<!-- ========= css links =============== -->
+	<link rel="stylesheet" type="text/css" href="style perseation3.css">
+	<!--============== box icons link ==================-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ========== font awesome =================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+	<style>
+    .project-section {
+      margin: 50px 0;
+      text-align: center;
+    }
+
+    .project-title {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .project-description {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: var(--text-color);
+    }
+
+    .project-gallery {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 10px;
+      scroll-behavior: smooth;
+    }
+
+    .project-gallery img {
+      height: 300px;
+      border-radius: 10px;
+      border: 2px solid var(--main-color);
+      cursor: pointer;
+    }
+
+    .project-gallery::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .project-gallery::-webkit-scrollbar-thumb {
+      background-color: var(--main-color);
+      border-radius: 4px;
+    }
+
+    /* ===== Responsive Additions ===== */
+    @media (max-width: 768px) {
+      .project-title {
+        font-size: 2.2rem;
+      }
+      .project-description {
+        font-size: 1.2rem;
+      }
+      .project-gallery img {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project-title {
+        font-size: 1.8rem;
+      }
+      .project-description {
+        font-size: 1rem;
+      }
+      .project-gallery img {
+        height: 150px;
+      }
+    }
+
+    /* ===== Image Popup ===== */
+    #imagePopup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #popupImage {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      border: 5px solid #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="project">
+    <h2 class="heading">My <span>Projects</span></h2>
+
+    <!-- Project 1 -->
+    <div class="project-section">
+      <h3 class="project-title">Medical Care</h3>
+      <p class="project-description">A medical appointment web app with PHP backend and patient/doctor panel.</p>
+      <div class="project-gallery">
+        <img src="./send file/medical php data base/1.jpg" alt="Doctor Project - Home">
+        <img src="./send file/medical php data base/2.jpg" alt="Doctor Project - Home">
+        <img src="./send file/medical php data base/3.jpg" alt="Doctor Project - Home">
+        <img src="./send file/medical php data base/4.jpg" alt="Doctor Project - Home">
+        <img src="./send file/medical php data base/5.jpg" alt="Doctor Project - Home">
+        <img src="./send file/medical php data base/6.jpg" alt="Doctor Project - Home">
+        <img src="./send file/medical php data base/7.jpg" alt="Doctor Project - login">
+        <img src="./send file/medical php data base/8.jpg" alt="Doctor Project - Register">
+        <img src="./send file/medical php data base/9.jpg" alt="Doctor Project - contact us">
+        <img src="./send file/medical php data base/10.jpg" alt="Doctor Project - doctor">
+        <img src="./send file/medical php data base/11.jpg" alt="Doctor Project - doctor">
+        <img src="./send file/medical php data base/12.jpg" alt="Doctor Project - appointment">
+        <img src="./send file/medical php data base/13.jpg" alt="Doctor Project - show appointment">
+        <img src="./send file/medical php data base/data base img/data base.jpg" alt="Doctor Project - database">
+        <img src="./send file/medical php data base/data base img/data base user.jpg" alt="Doctor Project - database">
+        <img src="./send file/medical php data base/data base img/data base op.jpg" alt="Doctor Project - database">
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-section">
+      <h3 class="project-title">Good Harvest Bakery</h3>
+      <p class="project-description">A secure JS-based system for storing and retrieving user data.</p>
+      <div class="project-gallery">
+        <img src="./send file/Good Harvest Bakery/1.jpg" alt="Good Harvest Bakery - Home">
+        <img src="./send file/Good Harvest Bakery/2.jpg" alt="Good Harvest Bakery - Home">
+        <img src="./send file/Good Harvest Bakery/3.jpg" alt="Good Harvest Bakery - gallery">
+        <img src="./send file/Good Harvest Bakery/4.jpg" alt="Good Harvest Bakery - gallery">
+        <img src="./send file/Good Harvest Bakery/5.jpg" alt="Good Harvest Bakery - gallery">
+        <img src="./send file/Good Harvest Bakery/6.jpg" alt="Good Harvest Bakery - gallery">
+        <img src="./send file/Good Harvest Bakery/7.jpg" alt="Good Harvest Bakery - gallery - database">
+        <img src="./send file/Good Harvest Bakery/8.jpg" alt="Good Harvest Bakery - about us">
+        <img src="./send file/Good Harvest Bakery/9.jpg" alt="Good Harvest Bakery - about us">
+        <img src="./send file/Good Harvest Bakery/10.jpg" alt="Good Harvest Bakery - about us">
+        <img src="./send file/Good Harvest Bakery/11.jpg" alt="Good Harvest Bakery - about us - database">
+        <img src="./send file/Good Harvest Bakery/12.jpg" alt="Good Harvest Bakery - Home">
+      </div>
+    </div>
+
+  </section>
+
+  <div style="text-align: center; margin: 5rem 0;">
+    <a href="perseaction3.html" class="btn" style="font-size: 1.6rem; padding: 1rem 2rem; background: var(--main-color); color: var(--bg-color); border-radius: 8px; text-decoration: none;">
+      ⬅ Back to Home
+    </a>
+  </div>
+
+  <!-- Image Popup Container -->
+  <div id="imagePopup">
+    <img id="popupImage" src="" alt="popup">
+  </div>
+
+  <script>
+    const popup = document.getElementById('imagePopup');
+    const popupImg = document.getElementById('popupImage');
+
+    // Add click event to each image
+    document.querySelectorAll('.project-gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        popupImg.src = img.src;
+        popup.style.display = 'flex';
+      });
+    });
+
+    // Close popup when clicking outside the image
+    popup.addEventListener('click', (e) => {
+      if (e.target !== popupImg) {
+        popup.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
